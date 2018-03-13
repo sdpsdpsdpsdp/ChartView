@@ -1,0 +1,5 @@
+<resources>
+    <string name="ReadSuccess">成功</string>
+    <string name="ReadFail">失败</string>
+    <string name="NoReadMeter">未抄</string>
+</resources>

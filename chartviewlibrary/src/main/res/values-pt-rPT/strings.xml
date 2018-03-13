@@ -1,0 +1,5 @@
+<resources>
+    <string name="ReadSuccess">Sucesso</string>
+    <string name="ReadFail">Falha</string>
+    <string name="NoReadMeter">Ainda não lido</string>
+</resources>
