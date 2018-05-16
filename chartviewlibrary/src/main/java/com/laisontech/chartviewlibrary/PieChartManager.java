@@ -93,7 +93,7 @@ public class PieChartManager {
         // 触摸旋转
         mPieChart.setRotationEnabled(false);
         //设置初始旋转角度
-        mPieChart.setRotationAngle(0);
+        mPieChart.setRotationAngle(90);
         mPieChart.setHighlightPerTapEnabled(true);
         if (isNeedAnim()) {
             mPieChart.animateXY(1000, 1000);
