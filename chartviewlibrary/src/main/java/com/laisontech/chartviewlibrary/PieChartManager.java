@@ -135,6 +135,30 @@ public class PieChartManager {
         mPieChart.invalidate();
     }
 
+    public void setPieData(ArrayList<PieEntry> entries, List<Integer> textColors) {
+        mPieDataSet = new PieDataSet(entries, "");
+        //设置各个饼状图之间的距离
+        mPieDataSet.setSliceSpace(0.1f);
+        // 部分区域被选中时多出的长度
+        mPieDataSet.setSelectionShift(2f);
+        //设置颜色的显示
+        mPieDataSet.setColors(textColors);
+        //将文字设在外部
+//        dataSet.setValueLineColor(Color.parseColor("#8a8a8a"));
+//        dataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+//        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+
+        mPieData = new PieData(mPieDataSet);
+        mPieData.setValueFormatter(new PercentFormatter());
+        //区域文字的大小
+        mPieData.setValueTextSize(8f);
+        mPieData.setValueTextColor(Color.WHITE);
+        mPieChart.setData(mPieData);
+        mPieChart.highlightValues(null);
+        //刷新
+        mPieChart.invalidate();
+    }
+
     //设置共用参数
     private List<Integer> getValueTextColor(ArrayList<PieEntry> entries) {
         List<Integer> colors = new ArrayList<>();
